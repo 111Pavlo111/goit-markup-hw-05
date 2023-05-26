@@ -301,11 +301,16 @@ button {
     font-size: 16px;
     line-height: 1.5;
 
+
     transition: color var(--duration-and-timing-function);
 }
 
 .header-nav-link:hover,
 .header-nav-link:focus {
+    color: #404bbf;
+}
+
+.active {
     color: #404bbf;
 }
 
@@ -420,6 +425,11 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+
+    transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .btn-portfolio:hover,
@@ -577,13 +587,14 @@ button {
     border: 1px solid #8E8F99;
     border-radius: 4px;
 
-    transition: color var(--duration-and-timing-function), border var(--duration-and-timing-function);
+    transition: border-color var(--duration-and-timing-function),
+        color var(--duration-and-timing-function);
 }
 
 .customers-link:hover,
 .customers-link:focus {
     color: #404BBF;
-    border: 1px solid #404BBF;
+    border-color: 1px solid #404BBF;
 }
 
 .company-svg {
@@ -656,7 +667,7 @@ button {
     background-color: rgba(46, 47, 66, 0.4);
 
     transition: opacity var(--duration-and-timing-function),
-    visibility var(--duration-and-timing-function);
+        visibility var(--duration-and-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -695,9 +706,8 @@ button {
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
-    transition: background-color var(--duration-and-timing-function),
-     border var(--duration-and-timing-function),
-      fill var(--duration-and-timing-function);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-btn:hover,
@@ -708,3 +718,6 @@ button {
 
 }
 
+.modal-close-svg{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
